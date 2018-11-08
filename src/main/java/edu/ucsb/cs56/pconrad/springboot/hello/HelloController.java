@@ -21,9 +21,9 @@ public class HelloController {
         return "Submit Your Own Event";
     }
 
-	@RequestMapping("/FAQ")
+	@RequestMapping("/faq")
 	public String page3() {
-        return "FAQ";
+        return "faq";
     }
 
 	
