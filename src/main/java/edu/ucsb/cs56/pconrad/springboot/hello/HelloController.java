@@ -11,19 +11,19 @@ public class HelloController {
         return "index";
     }
 
-	@RequestMapping("/page1")
+	@RequestMapping("/events")
     public String page1() {
-        return "page1";
+        return "Events";
     }
 
-	@RequestMapping("/page2")
+	@RequestMapping("/submitEvent")
 	public String page2() {
-        return "page2";
+        return "Submit Your Own Event";
     }
 
-	@RequestMapping("/page3")
+	@RequestMapping("/FAQ")
 	public String page3() {
-        return "page3";
+        return "FAQ";
     }
 
 	

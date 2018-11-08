@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>Page 1</title>
+   <title>FAQ</title>
    <#include "head.ftl" />
  </head>
  <body>
    <#include "navbar.ftl" />
-   <h1>This is Page 1</h1>
-  <p>Woo hoo, page 1</p>
+   <h1>FAQ</h1>
+  <p>A page for frequently asked questions</p>
  </body>
 </html>

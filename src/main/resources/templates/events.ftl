@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>Page 3</title>
+   <title>Events</title>
    <#include "head.ftl" />
  </head>
  <body>
    <#include "navbar.ftl" />
-   <h1>This is Page 3</h1>
-  <p>Same stuff, different page</p>
+   <h1>Events</h1>
+  <p>A list of events should pop on this page for users to view</p>
  </body>
 </html>
