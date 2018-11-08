@@ -13,12 +13,12 @@ public class HelloController {
 
 	@RequestMapping("/events")
     public String page1() {
-        return "Events";
+        return "events";
     }
 
 	@RequestMapping("/submitEvent")
 	public String page2() {
-        return "Submit Your Own Event";
+        return "submitEvent";
     }
 
 	@RequestMapping("/faq")

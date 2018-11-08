@@ -5,21 +5,23 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="/page1">Page 1</a>
+      <a class="nav-link" href="/events">Events</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/page2">Page 2</a>
+      <a class="nav-link" href="/submitEvent">Submit an Event</a>
     </li>
-
+    <li class="nav-item">
+      <a class="nav-link" href="/faq">FAQ</a>
+    </li>
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Dropdown link
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="/page1">Page 1</a>
-        <a class="dropdown-item" href="/page2">Page 2</a>
-        <a class="dropdown-item" href="/page3">Page 3</a>
+        <a class="dropdown-item" href="/events">Events</a>
+        <a class="dropdown-item" href="/submitEvent">Submit an Event</a>
+        <a class="dropdown-item" href="/faq">FAQ</a>
       </div>
     </li>
   </ul>

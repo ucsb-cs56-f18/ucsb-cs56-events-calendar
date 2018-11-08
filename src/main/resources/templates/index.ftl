@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>Spring Boot Freemarker Demo</title>
+   <title>UCSB Events App</title>
    <#include "head.ftl" />
  </head>
  <body>
    <#include "navbar.ftl" />
-   <h1>Spring Boot with Freemarker</h1>
-  <p>Hello, World!</p>
+   <h1>UCSB Events App</h1>
+  <p>Welcome to the UCSB events app! Find upcoming UCSB events here!</p>
  </body>
 </html>
