@@ -1,10 +1,7 @@
-# STARTER_lab06
-UCSB Event Calender
-Ronald Hoang
 
-UCSB Event Calender is a web app that scrapes different websites and creates a calender of different events hosted at UCSB for people to more easily keep track of what's happening at UCSB
+# Fall 2018: Events Calender App
 
-Starter code for [lab06](https://ucsb-cs56-f18.github.io/lab/lab06/)
+Members: Daniel, Dean, Frank, Jeff, Ronald, Ryan
 
-
-
+Main Idea: This app allows the user to browse all events going on at UCSB and related events in Isla Vista.
+The user will be able to view details for events and apply filters to better find events that fit their interests.
