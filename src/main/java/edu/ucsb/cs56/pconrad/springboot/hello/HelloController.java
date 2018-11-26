@@ -26,5 +26,5 @@ public class HelloController {
         return "faq";
     }
 
-	
+
 }
