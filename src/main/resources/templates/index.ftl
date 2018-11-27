@@ -7,6 +7,6 @@
  <body>
    <#include "navbar.ftl" />
    <h1>UCSB Events App</h1>
-  <p>Welcome to the UCSB events app! Find upcoming UCSB events here!</p>
+   <p>Welcome to the UCSB events app! Find upcoming UCSB events here!</p>
  </body>
 </html>

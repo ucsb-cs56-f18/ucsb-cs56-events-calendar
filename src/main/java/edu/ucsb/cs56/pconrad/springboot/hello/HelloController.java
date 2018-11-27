@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HelloController {
 
-    @RequestMapping("/")
+  @RequestMapping("/")
     public String index() {
         return "index";
     }
@@ -26,5 +26,5 @@ public class HelloController {
         return "faq";
     }
 
-	
+
 }

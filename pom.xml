@@ -21,7 +21,7 @@
 	<dependency>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-freemarker</artifactId>
-	</dependency>          
+	</dependency>
     </dependencies>
 
     <properties>
@@ -29,30 +29,30 @@
     </properties>
 
 
-    <build>
-      <plugins>
-	<plugin>
-	  <groupId>org.springframework.boot</groupId>
-	  <artifactId>spring-boot-maven-plugin</artifactId>
-	</plugin>
-        <plugin>
-	  <groupId>com.heroku.sdk</groupId>
-	  <artifactId>heroku-maven-plugin</artifactId>
-	  <version>2.0.3</version>
-	  <configuration>
+  <build>
+    <plugins>
+      <plugin>
+      	 <groupId>org.springframework.boot</groupId>
+      	 <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+    	  <groupId>com.heroku.sdk</groupId>
+    	  <artifactId>heroku-maven-plugin</artifactId>
+    	  <version>2.0.3</version>
+    	  <configuration>
             <jdkVersion>1.8</jdkVersion>
             <!-- Use your own application name -->
 	    <!-- at Heroku CLI, use heroku apps to list, or use Heroku Dashboard -->
-            <appName>ucsb-events-calendar</appName> 
+            <appName>ucsb-events-calendar</appName>
             <processTypes>
               <!-- Tell Heroku how to launch your application -->
               <!-- You might have to remove the ./ in front   -->
               <web>java $JAVA_OPTS -jar target/gs-spring-boot-0.1.0.jar --server.port=$PORT</web>
 
             </processTypes>
-	  </configuration>
+	        </configuration>
         </plugin>
-        </plugins>
+      </plugins>
     </build>
 
 </project>
