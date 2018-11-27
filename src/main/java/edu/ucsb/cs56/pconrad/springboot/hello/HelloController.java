@@ -16,12 +16,12 @@ public class HelloController {
         return "events";
     }
 
-	   @RequestMapping("/submitEvent")
+	  @RequestMapping("/submitEvent")
 	public String page2() {
         return "submitEvent";
     }
 
-	   @RequestMapping("/faq")
+	  @RequestMapping("/faq")
 	public String page3() {
         return "faq";
     }
