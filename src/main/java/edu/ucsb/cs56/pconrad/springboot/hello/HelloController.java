@@ -6,22 +6,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HelloController {
 
-  @RequestMapping("/")
+    @RequestMapping("/")
     public String index() {
         return "index";
     }
 
-	@RequestMapping("/events")
+    @RequestMapping("/events")
     public String page1() {
         return "events";
     }
 
-	@RequestMapping("/submitEvent")
+	   @RequestMapping("/submitEvent")
 	public String page2() {
         return "submitEvent";
     }
 
-	@RequestMapping("/faq")
+	   @RequestMapping("/faq")
 	public String page3() {
         return "faq";
     }
