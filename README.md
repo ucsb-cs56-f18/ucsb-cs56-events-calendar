@@ -17,8 +17,11 @@ Heroku dashboard: https://dashboard.heroku.com/apps/ucsb-events-calendar
 ### Prerequisites
 
 Download Maven here: https://maven.apache.org/download.cgi
+
 Download Java here: https://www.java.com/en/download/
+
 Springboot info: http://spring.io/
+
 Heroku: https://www.heroku.com/
 
 
