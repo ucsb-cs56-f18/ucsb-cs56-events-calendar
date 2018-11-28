@@ -7,8 +7,11 @@ submit your own event to be added to the calendar.
 ## Getting Started
 
 This project uses Maven 4.0.0, Java 1.8.0_181, Springboot 2.0.5, Heroku 2.0.3, and GitHub. Deploy the website via Heroku and you can find the
+
 deployed website here: https://ucsb-events-calendar.herokuapp.com/
+
 You can find the github main branch here: https://github.com/ucsb-cs56-f18/ucsb-cs56-events-calendar
+
 Heroku dashboard: https://dashboard.heroku.com/apps/ucsb-events-calendar
 
 ### Prerequisites
@@ -63,6 +66,8 @@ Please add the appropiate user story and issue to the board.
 
 Mentor:
 Scott Chow
+
+
 Students:
 Ronald Hoang, Ryan Gormley, Jeff Tellew, Frank Lee, Dean Narlock
 
