@@ -32,7 +32,7 @@
     		<groupId>org.seleniumhq.selenium</groupId>
     		<artifactId>htmlunit-driver</artifactId>
       </dependency>
-      
+
     </dependencies>
 
     <properties>
@@ -63,6 +63,32 @@
             </processTypes>
 	        </configuration>
         </plugin>
+
+        <!-- Make executable jar WITH dependencies -->
+      <!-- See: https://www.baeldung.com/executable-jar-with-maven -->
+
+      <plugin>
+	         <groupId>org.apache.maven.plugins</groupId>
+	   <artifactId>maven-assembly-plugin</artifactId>
+	     <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <archive>
+                <manifest>
+		    <mainClass>edu.ucsb.cs56.events_calendar.Scraping</mainClass>
+                </manifest>
+              </archive>
+              <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
+            </configuration>
+          </execution>
+	       </executions>
+      </plugin>
       </plugins>
     </build>
 
