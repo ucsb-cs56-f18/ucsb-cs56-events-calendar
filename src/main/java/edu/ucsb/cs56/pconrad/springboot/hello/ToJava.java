@@ -19,7 +19,6 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import org.springframework.util.StreamUtils;
 
-
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.Path;
@@ -27,18 +26,28 @@ import java.nio.charset.Charset;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class ToJava{
-  public static byte [] readByteDataFromResourceFile(String filename) throws java.io.IOException {
+
+	public static byte [] readByteDataFromResourceFile(String filename) throws java.io.IOException {
 		java.io.InputStream in = new ToJava().getClass().getResourceAsStream(filename);
 		byte[] data = StreamUtils.copyToByteArray(in);
 		return data;
-}
-    public static void main(String [] args) throws java.io.IOException, java.net.URISyntaxException {
+	}
+
+	public static void eventsToList() throws java.io.IOException, java.net.URISyntaxException {
+ 		byte [] jsonData = readByteDataFromResourceFile("/developerApi.json");
+ 		ObjectMapper om = new ObjectMapper();
+        List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
+
+        return list;
+	}
+    
+	public static void main(String [] args) throws java.io.IOException, java.net.URISyntaxException {
  		System.out.println("ToJava Demo");
 
  		// read buildings.json into a List<BuildingCode>
  		byte [] jsonData = readByteDataFromResourceFile("/developerApi.json");
  		ObjectMapper om = new ObjectMapper();
-         List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
+        List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
 
  		System.out.println(list);
 

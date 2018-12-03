@@ -1,6 +1,7 @@
-package edu.ucsb.cs56.pconrad.springboot.controller;
+package edu.ucsb.cs56.pconrad.springboot.hello;
 
 import edu.ucsb.cs56.pconrad.springboot.bean.Event;
+import edu.ucsb.cs56.pconrad.springboot.hello.ToJava;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,9 +16,16 @@ public class HelloController {
 
     @RequestMapping("/events")
     public ModelAndView page1() {
-        List<Event> events = new List<Event>;
-        events.add(new Event("Name1", "Location1", "Date1"));
-        events.add(new Event("Name2", "Location2", "Date2"));
+        List<Event> events;
+        try {
+            events = ToJava.eventsAsList();
+        }
+        catch(java.io.IOException) {
+            //Do something
+        }
+        catch(java.net.URISyntaxException) {
+            //Do something
+        }
 
         Map<String, Object> params = new HashMap<>();
         params.put("events", events);
