@@ -44,7 +44,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.mainClass>edu.ucsb.cs56.pconrad.springboot.hello.ToJava;</project.mainClass>
+        <project.mainClass>main.java.edu.ucsb.cs56.pconrad.springboot.hello.ToJava</project.mainClass>
     </properties>
 
 

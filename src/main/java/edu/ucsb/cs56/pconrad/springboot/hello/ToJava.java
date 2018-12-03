@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.pconrad.springboot.hello;
+package main.java.edu.ucsb.cs56.pconrad.springboot.hello;
 
 import java.io.File;
 import java.io.IOException;
