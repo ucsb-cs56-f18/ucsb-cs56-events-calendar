@@ -79,7 +79,7 @@
             <configuration>
               <archive>
                 <manifest>
-		    <mainClass>edu.ucsb.cs56.events_calendar.Scraping</mainClass>
+		    <mainClass>main.java.edu.ucsb.cs56.events_calendar.Scraping</mainClass>
                 </manifest>
               </archive>
               <descriptorRefs>
@@ -89,6 +89,16 @@
           </execution>
 	       </executions>
       </plugin>
+
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.2.1</version>
+            <configuration>
+                <mainClass>main.java.edu.ucsb.cs56.events_calendar.Scraping</mainClass>
+            </configuration>
+        </plugin>
+
       </plugins>
     </build>
 

@@ -1,4 +1,6 @@
-package edu.ucsb.cs56.events_calendar;
+package main.java.edu.ucsb.cs56.events_calendar;
+
+import main.java.edu.ucsb.cs56.events_calendar.Event;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,15 +27,9 @@ public class Scraping {
 
 	// START - IMMUTABLE ATTRIBUTES
 	private static String target_url = "https://events.ucsb.edu/next-three-months/";
-	private static String eventListXPath = "//*[@id=\"wpv-view-layout-13913-TCPID13914\"]/div[@class=\"mini-boxX\"]";
-	/*private static String courseLevelXPath ="//*[@id=\"ctl00_pageContent_dropDownCourseLevels\"]";
-       	private static String searchButtonXPath = "//*[@id=\"ctl00_pageContent_searchButton\"]";
-	private static String courseTableXPath = "//*[@id=\"aspnetForm\"]/table/tbody/tr[3]/td/div/center/table/tbody/tr";
-	private static String locationXPath = "//*[@id=\"aspnetForm\"]/table/tbody/tr[3]/td/div/center/table/tbody/tr[%d]/td[9]";
-	private static String daysXPath = "//*[@id=\"aspnetForm\"]/table/tbody/tr[3]/td/div/center/table/tbody/tr[%d]/td[7]";
-	private static timesXPath = "//*[@id=\"aspnetForm\"]/table/tbody/tr[3]/td/div/center/table/tbody/tr[%d]/td[8]";
-	private static String allCourseLevels = "All";*/
-	private static String nonRooms = "T B A";
+	private static String eventName = "//*[@id=\"wpv-view-layout-13913-TCPID13914\"]/div[1]/h2/a/select";
+	private static String eventDate = "//*[@id=\"wpv-view-layout-13913-TCPID13914\"]/div[1]/span/select";
+	private static String eventLocation = "//*[@id=\"wpv-view-layout-13913-TCPID13914\"]/div[1]/h3/span/a/select";
 	// END - IMMUTABLE ATTRIBUTES
 
 	public Scraping() {
@@ -42,7 +38,7 @@ public class Scraping {
 		driver.get(target_url);
 		ArrayList<String> events= get_subjectArea(driver);
 		System.out.println("works:" + events);
-		load_times_rooms_days(driver, events);
+		//load_times_rooms_days(driver, events);
 	}
 
 
@@ -57,10 +53,12 @@ public class Scraping {
 	*		driver	-- HtmlUnitDriver object for scraping
 	*/
 	public static ArrayList<String> get_subjectArea(HtmlUnitDriver driver){
-		Select s = new Select(driver.findElementByXPath(eventListXPath));
+		Select s = new Select(driver.findElementByXPath(eventDate));
 		ArrayList<String> temp = new ArrayList<String>();
 
-		for(WebElement e : s.getOptions())
+		WebElement e = s.getOptions().get(0);
+
+		//for(WebElement e : s.getOptions())
 			temp.add(e.getText());
 
 		return temp;

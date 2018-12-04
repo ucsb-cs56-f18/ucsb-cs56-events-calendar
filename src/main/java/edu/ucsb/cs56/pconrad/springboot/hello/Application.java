@@ -11,6 +11,6 @@ public class Application implements CommandLineRunner{
     }
     @Override
 public void run(String... args) throws Exception {
-  edu.ucsb.cs56.events_calendar.Scraping.main(new String[0]);
+  main.java.edu.ucsb.cs56.events_calendar.Scraping.main(new String[0]);
   }
 }
