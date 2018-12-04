@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.pconrad.springboot.hello;
+package main.java.edu.ucsb.cs56.pconrad.springboot.hello;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
