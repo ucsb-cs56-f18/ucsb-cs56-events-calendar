@@ -24,7 +24,7 @@ public class HelloController {
     @RequestMapping("/events")
     public ModelAndView page1() {
         List<Event> events= new ArrayList<Event> ();
-       try {
+        try {
             events = ToJava.eventsToList();
         }
         catch(java.io.IOException e) {
@@ -46,7 +46,7 @@ public class HelloController {
     }
 
     @RequestMapping("/faq")
-	public String page3() {
+	  public String page3() {
         return "faq";
     }
 }
