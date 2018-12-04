@@ -44,7 +44,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.mainClass>main.java.edu.ucsb.cs56.pconrad.springboot.hello.ToJava</project.mainClass>
+    <!--  <project.mainClass>main.java.edu.ucsb.cs56.pconrad.springboot.hello.ToJava</project.mainClass> -->
     </properties>
 
 
@@ -72,20 +72,20 @@
 	        </configuration>
         </plugin>
 
-        <!-- Make jar file executable (produce with `mvn package`)-->
+        <!--Make jar file executable (produce with `mvn package`)
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.1.0</version>
         <configuration>
           <archive>
-            <manifest>
+            <manifest> -->
               <!-- full package name of class with the main you want to run -->
-              <mainClass>${project.mainClass}</mainClass>
+          <!--     <mainClass>${project.mainClass}</mainClass>
             </manifest>
           </archive>
         </configuration>
-      </plugin>
+      </plugin>-->
 
 
       <!-- To enable `mvn exec:java`
@@ -94,7 +94,7 @@
 	   `mvn exec:java` by default just runs without trying to recompile.
       -->
 
-      <plugin>
+    <!--   <plugin>
       	<groupId>org.codehaus.mojo</groupId>
       	<artifactId>exec-maven-plugin</artifactId>
       	<version>1.6.0</version>
@@ -120,7 +120,7 @@
       	  </systemProperties>
       	</configuration>
       </plugin>
-
+-->
       </plugins>
     </build>
 
