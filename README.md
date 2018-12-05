@@ -37,6 +37,8 @@ Then to deploy your code use the command
 
 $ mvn spring-boot:run
 
+You can find your test website at: http://localhost:8080
+
 ## Deployment
 
 1. First make sure you're in your root directory and you're logged into your heroku account by using the command
