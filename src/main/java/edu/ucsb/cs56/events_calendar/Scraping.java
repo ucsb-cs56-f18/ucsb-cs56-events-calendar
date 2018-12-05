@@ -38,7 +38,7 @@ public class Scraping {
 		driver = new HtmlUnitDriver();
 		driver.setJavascriptEnabled(true);
 		driver.get(target_url);
-		ArrayList<String> events= get_events(driver);
+		ArrayList<Event> events= get_events(driver);
 		logger.info("works:" + events);
 		//load_times_rooms_days(driver, events);
 	}
@@ -52,19 +52,33 @@ public class Scraping {
 	*	parameters:
 	*		driver	-- HtmlUnitDriver object for scraping
 	*/
-	public static ArrayList<String> get_events(HtmlUnitDriver driver){
+	public static ArrayList<Event> get_events(HtmlUnitDriver driver){
 
 
 		java.util.List<WebElement> eventDivs =  driver.findElementsByXPath(eventDivsXPath);
 
 		logger.info("eventDivs:" + eventDivs);
 		
-		ArrayList<String> temp = new ArrayList<String>();
+		ArrayList<Event> events = new ArrayList<Event>();
 
-		for(WebElement e : eventDivs )
-			temp.add(e.getText());
+		for(WebElement e : eventDivs ) {
+			// TODO: Get the child elements of e that have the things
+			// When you have all the stuff, make an EVENT object and stick it in the list
+			
+			WebElement nameElem = e.findElement(new By.ByXPath("h2/a"));
+			
+			String name = nameElem.getText();
 
-		return temp;
+			String location = "code to get the location goes here";
+
+			String date = "code to get the date goes here";
+
+			
+			Event event = new Event(name, date, location); // name, location, date
+			events.add(event);
+		}
+
+		return events;
 	}
 
 	/*
