@@ -47,11 +47,14 @@ $ mvn spring-boot:run
 
     $ heroku create -insert-your-app-name-here-
 
-3. Update your pom.xml at the top to have your app name you just created underneath the <properties> tag
-
+3. Update your pom.xml at the top to have your app name you just created underneath the `<properties>` tag
+```
   <properties>
+  
     <my.app.name>your-app-name</my.app.name>
+    
   </properties>
+  ```
 
 update you-app-name to the name of your app when you used the heroku create command
 
