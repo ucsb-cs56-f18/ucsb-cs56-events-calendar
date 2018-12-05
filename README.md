@@ -39,11 +39,28 @@ $ mvn spring-boot:run
 
 ## Deployment
 
-First make sure you're in your root directory and you're logged into your heroku account
+First make sure you're in your root directory and you're logged into your heroku account by using the command
+
+$ heroku login
+
+Then on your command prompt use the command
+
+$ heroku create -insert-your-app-name-here-
+
+Update your pom.xml at the top to have your app name you just created underneath the <properties> tag
+
+  <properties>
+    <my.app.name>your-app-name</my.app.name>
+  </properties>
+
+update you-app-name to the name of your app when you used the heroku create command
 
 Then deploy your code with the command
 
 $ mvn package heroku:deploy
+
+Then access your deployed site at:
+https://your-app-name.herokuapp.com
 
 ## Built With
 
