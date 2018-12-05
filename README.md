@@ -8,7 +8,7 @@ submit your own event to be added to the calendar.
 
 This project uses Maven 4.0.0, Java 1.8.0_181, Springboot 2.0.5, Heroku 2.0.3, and GitHub. Deploy the website via Heroku and you can find the
 
-deployed website here: https://ucsb-events-calendar.herokuapp.com/
+Our deployed website here: https://ucsb-events-calendar.herokuapp.com/
 
 You can find the github main branch here: https://github.com/ucsb-cs56-f18/ucsb-cs56-events-calendar
 
@@ -36,6 +36,8 @@ $ heroku login
 Then to deploy your code use the command
 
 $ mvn spring-boot:run
+
+You can find your test website at: http://localhost:8080
 
 ## Deployment
 
