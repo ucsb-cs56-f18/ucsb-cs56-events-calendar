@@ -2,6 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+	<!-- Put in your own app name from when you used the name $ heroku create ________ -->
+	<properties>
+		<my.app.name>your-app-name-here</my.app.name>
+	</properties>
 
     <groupId>org.springframework</groupId>
     <artifactId>gs-spring-boot</artifactId>
@@ -43,7 +47,7 @@
             <jdkVersion>1.8</jdkVersion>
             <!-- Use your own application name -->
 	    <!-- at Heroku CLI, use heroku apps to list, or use Heroku Dashboard -->
-            <appName>ucsb-events-calendar</appName>
+            <appName>${my.app.name}</appName>
             <processTypes>
               <!-- Tell Heroku how to launch your application -->
               <!-- You might have to remove the ./ in front   -->
