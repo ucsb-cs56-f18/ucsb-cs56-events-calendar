@@ -11,6 +11,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /*
  * TODO: - Write the loading into database method
@@ -18,6 +20,8 @@ import org.openqa.selenium.support.ui.Select;
  * 		 - Use the building class and room
  */
 public class Scraping {
+     private static Logger logger = LoggerFactory.getLogger(Scraping.class);
+
 
 	// START -  MUTABLE ATTRIBUTES
 	private static HtmlUnitDriver driver;
@@ -27,21 +31,17 @@ public class Scraping {
 
 	// START - IMMUTABLE ATTRIBUTES
 	private static String target_url = "https://events.ucsb.edu/next-three-months/";
-	private static String eventName = "//*[@id=\"wpv-view-layout-13913-TCPID13914\"]/div[1]/h2/a/select";
-	private static String eventDate = "//*[@id=\"wpv-view-layout-13913-TCPID13914\"]/div[1]/span/select";
-	private static String eventLocation = "//*[@id=\"wpv-view-layout-13913-TCPID13914\"]/div[1]/h3/span/a/select";
+	private static String eventDivsXPath = "//div[@class=\"mini-boxX\"]";
 	// END - IMMUTABLE ATTRIBUTES
 
 	public Scraping() {
 		driver = new HtmlUnitDriver();
 		driver.setJavascriptEnabled(true);
 		driver.get(target_url);
-		ArrayList<String> events= get_subjectArea(driver);
-		System.out.println("works:" + events);
+		ArrayList<String> events= get_events(driver);
+		logger.info("works:" + events);
 		//load_times_rooms_days(driver, events);
 	}
-
-
 
 	public static void main(String []args){
 		Scraping s = new Scraping();
@@ -52,13 +52,16 @@ public class Scraping {
 	*	parameters:
 	*		driver	-- HtmlUnitDriver object for scraping
 	*/
-	public static ArrayList<String> get_subjectArea(HtmlUnitDriver driver){
-		Select s = new Select(driver.findElementByXPath(eventDate));
+	public static ArrayList<String> get_events(HtmlUnitDriver driver){
+
+
+		java.util.List<WebElement> eventDivs =  driver.findElementsByXPath(eventDivsXPath);
+
+		logger.info("eventDivs:" + eventDivs);
+		
 		ArrayList<String> temp = new ArrayList<String>();
 
-		WebElement e = s.getOptions().get(0);
-
-		//for(WebElement e : s.getOptions())
+		for(WebElement e : eventDivs )
 			temp.add(e.getText());
 
 		return temp;
