@@ -23,8 +23,6 @@
           <artifactId>spring-boot-starter-freemarker</artifactId>
 	      </dependency>
 
-
-  <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
          <groupId>org.projectlombok</groupId>
          <artifactId>lombok</artifactId>
@@ -44,7 +42,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!--  <project.mainClass>main.java.edu.ucsb.cs56.pconrad.springboot.hello.ToJava</project.mainClass> -->
     </properties>
 
 
@@ -60,67 +57,13 @@
     	  <version>2.0.3</version>
     	  <configuration>
             <jdkVersion>1.8</jdkVersion>
-            <!-- Use your own application name -->
-	    <!-- at Heroku CLI, use heroku apps to list, or use Heroku Dashboard -->
             <appName>ucsb-events-calendar</appName>
             <processTypes>
-              <!-- Tell Heroku how to launch your application -->
-              <!-- You might have to remove the ./ in front   -->
               <web>java $JAVA_OPTS -jar target/gs-spring-boot-0.1.0.jar --server.port=$PORT</web>
 
             </processTypes>
 	        </configuration>
         </plugin>
-
-        <!--Make jar file executable (produce with `mvn package`)
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.1.0</version>
-        <configuration>
-          <archive>
-            <manifest> -->
-              <!-- full package name of class with the main you want to run -->
-          <!--     <mainClass>${project.mainClass}</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>-->
-
-
-      <!-- To enable `mvn exec:java`
-	   https://www.mojohaus.org/exec-maven-plugin/usage.html
-	   Note that you must type `mvn compile exec:java` to retrigger compilation;
-	   `mvn exec:java` by default just runs without trying to recompile.
-      -->
-
-    <!--   <plugin>
-      	<groupId>org.codehaus.mojo</groupId>
-      	<artifactId>exec-maven-plugin</artifactId>
-      	<version>1.6.0</version>
-      	<executions>
-      	  <execution>
-      	    <goals>
-      	      <goal>java</goal>
-      	    </goals>
-      	  </execution>
-      	</executions>
-      	<configuration>
-      	  <mainClass>${project.mainClass}</mainClass>
-      	  <arguments>
-      	    <argument>argument1</argument>
-      	    ...
-      	  </arguments>
-      	  <systemProperties>
-      	    <systemProperty>
-      	      <key>myproperty</key>
-      	      <value>myvalue</value>
-      	    </systemProperty>
-      	    ...
-      	  </systemProperties>
-      	</configuration>
-      </plugin>
--->
       </plugins>
     </build>
 
