@@ -42,9 +42,9 @@ $ mvn spring-boot:run
 First make sure you're in your root directory and you're logged into your heroku account
 
 Then deploy your code with the command
-
+```
 $ mvn package heroku:deploy
-
+```
 ## Built With
 
 * [Spring Boot] (https://spring.io/projects/spring-boot) - The web framework used
