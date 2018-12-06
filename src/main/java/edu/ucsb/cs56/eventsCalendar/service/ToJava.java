@@ -1,4 +1,6 @@
-package main.java.edu.ucsb.cs56.pconrad.springboot.hello;
+package edu.ucsb.cs56.eventsCalendar.service;
+
+import edu.ucsb.cs56.eventsCalendar.bean.Event;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,28 +27,28 @@ import java.nio.file.Path;
 import java.nio.charset.Charset;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
-public class ToJava{
+public class ToJava {
 
-public static byte [] readByteDataFromResourceFile(String filename) throws java.io.IOException {
+	public static byte [] readByteDataFromResourceFile(String filename) throws java.io.IOException {
 		java.io.InputStream in = new ToJava().getClass().getResourceAsStream(filename);
 		byte[] data = StreamUtils.copyToByteArray(in);
 		return data;
 	}
 
-public static List eventsToList() throws java.io.IOException, java.net.URISyntaxException {
+	public static List eventsToList() throws java.io.IOException, java.net.URISyntaxException {
  		byte [] jsonData = readByteDataFromResourceFile("/developerApi.json");
  		ObjectMapper om = new ObjectMapper();
-    		List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
-    		return list;
+    	List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
+    	return list;
 	}
 
-public static void main(String [] args) throws java.io.IOException, java.net.URISyntaxException {
+	public static void main(String [] args) throws java.io.IOException, java.net.URISyntaxException {
  		System.out.println("ToJava Demo");
 
  		// read buildings.json into a List<BuildingCode>
  		byte [] jsonData = readByteDataFromResourceFile("/developerApi.json");
  		ObjectMapper om = new ObjectMapper();
-	        List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
+	    List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
  		System.out.println(list);
-     }
- }
+    }
+}

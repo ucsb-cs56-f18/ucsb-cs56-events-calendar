@@ -1,7 +1,7 @@
-package main.java.edu.ucsb.cs56.pconrad.springboot.hello;
+package edu.ucsb.cs56.eventsCalendar.controller;
 
 //import main.java.edu.ucsb.cs56.pconrad.springboot.bean.Event;
-import main.java.edu.ucsb.cs56.pconrad.springboot.hello.ToJava;
+import edu.ucsb.cs56.eventsCalendar.service.ToJava;
 
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -19,7 +19,6 @@ public class HelloController {
 
     private final static Logger LOGGER = Logger.getLogger(HelloController.class.getName());
     //LOGGER.setLevel(Level.INFO);
-
 
 
     @RequestMapping("/")
