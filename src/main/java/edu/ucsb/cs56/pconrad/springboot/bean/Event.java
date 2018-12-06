@@ -1,9 +1,9 @@
-	package main.java.edu.ucsb.cs56.pconrad.springboot.bean;
+package main.java.edu.ucsb.cs56.pconrad.springboot.bean;
 
-	import java.util.Objects;
+import java.util.Objects;
 
 
-	public class Event {
+public class Event {
 	private String name;
 	private String location;
 	private String date;
