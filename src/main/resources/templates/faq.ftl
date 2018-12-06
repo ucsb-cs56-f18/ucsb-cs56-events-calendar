@@ -6,7 +6,7 @@
  </head>
  <body>
    <#include "navbar.ftl" />
-   <h1>FAQ (faq BRANCH)</h1>
+   <h1>FAQ (ON THE faq BRANCH)</h1>
    <p>A page for frequently asked questions</p>
    <h3>Q: What is this app?</h3>
    <p>A: This webapp gathers upcoming UCSB student events and organises them in a list-calendar format. Click on the Events tab to see the calendar.</p>
