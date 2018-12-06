@@ -28,7 +28,7 @@ public class Scraping {
 	// START - IMMUTABLE ATTRIBUTES
 	private static String target_url = "https://events.ucsb.edu/next-three-months/";
 	private static String eventName = "//*[@id=\"wpv-view-layout-13913-TCPID13914\"]/div[1]/h2/a/select";
-	private static String eventDate = "//*[@id=\"wpv-view-layout-13913-TCPID13914\"]/div[1]/span/select";
+	private static String eventDate = "//*[@id=\"menu-item-2083\"]/a";
 	private static String eventLocation = "//*[@id=\"wpv-view-layout-13913-TCPID13914\"]/div[1]/h3/span/a/select";
 	// END - IMMUTABLE ATTRIBUTES
 
