@@ -2,7 +2,7 @@
 
 A web app that scrapes data of events from multiple UCSB websites to put them all into one easy to view calendar. You will be 
 able to separate them by categories, and dates & times that work for the visitor. There is also a submit event page where you can 
-submit your own event to be added to the calendar.
+submit your own event to be added to the calendar. To see more information for this webapps or news on recent updates, visit the FAQ page. 
 
 ## Getting Started
 
