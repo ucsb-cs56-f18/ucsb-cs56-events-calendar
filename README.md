@@ -2,7 +2,7 @@
 
 A web app that scrapes data of events from multiple UCSB websites to put them all into one easy to view calendar. You will be 
 able to separate them by categories, and dates & times that work for the visitor. There is also a submit event page where you can 
-submit your own event to be added to the calendar.
+submit your own event to be added to the calendar. To see more information for this webapp or news on recent updates, visit the FAQ page. 
 
 ## Getting Started
 
@@ -30,21 +30,21 @@ Heroku: https://www.heroku.com/
 First make sure you cd into your root directory where you have your branch of the project
 
 In your command prompt make sure you're logged into your affiliated heroku account and follow login instructions
-
+```
 $ heroku login
-
+```
 Then to deploy your code use the command
-
+```
 $ mvn spring-boot:run
-
+```
 ## Deployment
 
 First make sure you're in your root directory and you're logged into your heroku account
 
 Then deploy your code with the command
-
+```
 $ mvn package heroku:deploy
-
+```
 ## Built With
 
 * [Spring Boot] (https://spring.io/projects/spring-boot) - The web framework used
