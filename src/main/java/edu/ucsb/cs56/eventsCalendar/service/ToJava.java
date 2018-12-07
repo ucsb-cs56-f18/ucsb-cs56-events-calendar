@@ -50,6 +50,6 @@ public class ToJava {
  		ObjectMapper om = new ObjectMapper();
 	    	List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
  		System.out.println(list);
-    }
+	}
 }
 
