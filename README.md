@@ -1,8 +1,8 @@
 # UCSB Events Calendar
 
-A web app that scrapes data of events from multiple UCSB websites to put them all into one easy to view calendar. You will be
-able to separate them by categories, and dates & times that work for the visitor. There is also a submit event page where you can
-submit your own event to be added to the calendar. To see more information for this webapp or news on recent updates, visit the FAQ page.
+A web app that scrapes data of events from multiple UCSB websites to put them all into one easy to view calendar. You will be 
+able to separate them by categories, and dates & times that work for the visitor. There is also a submit event page where you can 
+submit your own event to be added to the calendar. To see more information for this webapp or news on recent updates, visit the FAQ page. 
 
 ## Getting Started
 
@@ -37,6 +37,7 @@ Then to deploy your code use the command
 ```
 $ mvn spring-boot:run
 ```
+
 You can find your test website at: http://localhost:8080
 
 ## Deployment
@@ -61,9 +62,9 @@ You can find your test website at: http://localhost:8080
 update you-app-name to the name of your app when you used the heroku create command
 
 4. Then deploy your code with the command
-
+```
     $ mvn package heroku:deploy
-
+```
 5. Then access your deployed site at:
 https://your-app-name.herokuapp.com
 It may take a few minutes!
