@@ -56,7 +56,7 @@ You can find your test website at: http://localhost:8080
     <my.app.name>your-app-name</my.app.name>
 
   </properties>
-  ```
+```
 
 update you-app-name to the name of your app when you used the heroku create command
 
