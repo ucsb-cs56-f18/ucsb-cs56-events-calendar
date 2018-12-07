@@ -2,16 +2,10 @@ package edu.ucsb.cs56.eventsCalendar.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.CommandLineRunner;
 
 @SpringBootApplication
-public class Application implements CommandLineRunner{
+public class Application {
     public static void main(String[] args) {
-      SpringApplication.run(Application.class, args);
-    }
-    
-    @Override
-    public void run(String... args) throws Exception {
-        main.java.edu.ucsb.cs56.events_calendar.Scraping.main(new String[0]);
+	  SpringApplication.run(Application.class, args);
     }
 }
