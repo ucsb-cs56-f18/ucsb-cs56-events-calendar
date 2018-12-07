@@ -2,63 +2,75 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+	<!-- Put in your own app name from when you used the name $ heroku create ________ -->
+	<properties>
+		<my.app.name>ucsb-events-calendar</my.app.name>
+    <java.version>1.8</java.version>
+	</properties>
 
     <groupId>org.springframework</groupId>
     <artifactId>gs-spring-boot</artifactId>
     <version>0.1.0</version>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.5.RELEASE</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-parent</artifactId>
+      <version>2.0.5.RELEASE</version>
     </parent>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-	      <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-freemarker</artifactId>
-	      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+      </dependency>
 
-        <dependency>
-         <groupId>org.projectlombok</groupId>
-         <artifactId>lombok</artifactId>
-         <version>1.18.4</version>
-         <scope>provided</scope>
-        </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-freemarker</artifactId>
+      </dependency>
 
-       <dependency>
-         <groupId>com.fasterxml.jackson.core</groupId>
-         <artifactId>jackson-databind</artifactId>
-         <version>[2.8.11.1,)</version>
-       </dependency>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.4</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>[2.8.11.1,)</version>
+      </dependency>
     </dependencies>
 
+
     <properties>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
 
   <build>
     <plugins>
+
       <plugin>
-      	 <groupId>org.springframework.boot</groupId>
-      	 <artifactId>spring-boot-maven-plugin</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
+
       <plugin>
     	  <groupId>com.heroku.sdk</groupId>
     	  <artifactId>heroku-maven-plugin</artifactId>
     	  <version>2.0.3</version>
     	  <configuration>
             <jdkVersion>1.8</jdkVersion>
-            <appName>ucsb-events-calendar</appName>
+            <!-- Use your own application name -->
+	    <!-- at Heroku CLI, use heroku apps to list, or use Heroku Dashboard -->
+            <appName>${my.app.name}</appName>
             <processTypes>
+              <!-- Tell Heroku how to launch your application -->
+              <!-- You might have to remove the ./ in front   -->
               <web>java $JAVA_OPTS -jar target/gs-spring-boot-0.1.0.jar --server.port=$PORT</web>
 
             </processTypes>
@@ -66,5 +78,6 @@
         </plugin>
       </plugins>
     </build>
+
 
 </project>

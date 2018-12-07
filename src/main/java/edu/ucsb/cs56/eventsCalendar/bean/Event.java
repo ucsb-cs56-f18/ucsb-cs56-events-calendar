@@ -1,4 +1,4 @@
-package main.java.edu.ucsb.cs56.pconrad.springboot.hello;
+package edu.ucsb.cs56.eventsCalendar.bean;
 
 import lombok.Data;
 
