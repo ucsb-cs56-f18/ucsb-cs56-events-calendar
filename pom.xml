@@ -2,6 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+	<!-- Put in your own app name from when you used the name $ heroku create ________ -->
+	<properties>
+		<my.app.name>ucsb-events-calendar</my.app.name>
+    <java.version>1.8</java.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
     <groupId>org.springframework</groupId>
     <artifactId>gs-spring-boot</artifactId>
@@ -50,13 +58,6 @@
 
     </dependencies>
 
-    <properties>
-      <java.version>1.8</java.version>
-      <maven.compiler.source>1.8</maven.compiler.source>
-      <maven.compiler.target>1.8</maven.compiler.target>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
 
   <build>
     <plugins>
@@ -73,8 +74,8 @@
     	  <configuration>
             <jdkVersion>1.8</jdkVersion>
             <!-- Use your own application name -->
-	    <!-- at Heroku CLI, use heroku apps to list, or use Heroku Dashboard -->
-            <appName>ucsb-events-calendar</appName>
+	          <!-- at Heroku CLI, use heroku apps to list, or use Heroku Dashboard -->
+            <appName>${my.app.name}</appName>
             <processTypes>
               <!-- Tell Heroku how to launch your application -->
               <!-- You might have to remove the ./ in front   -->
@@ -83,43 +84,8 @@
             </processTypes>
 	        </configuration>
         </plugin>
-
-        <!-- Make executable jar WITH dependencies -->
-      <!-- See: https://www.baeldung.com/executable-jar-with-maven -->
-
-      <plugin>
-	         <groupId>org.apache.maven.plugins</groupId>
-	   <artifactId>maven-assembly-plugin</artifactId>
-	     <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <archive>
-                <manifest>
-		    <mainClass>main.java.edu.ucsb.cs56.events_calendar.Scraping</mainClass>
-                </manifest>
-              </archive>
-              <descriptorRefs>
-                <descriptorRef>jar-with-dependencies</descriptorRef>
-              </descriptorRefs>
-            </configuration>
-          </execution>
-	       </executions>
-      </plugin>
-
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <version>1.2.1</version>
-            <configuration>
-                <mainClass>main.java.edu.ucsb.cs56.events_calendar.Scraping</mainClass>
-            </configuration>
-        </plugin>
-
       </plugins>
     </build>
+
 
 </project>

@@ -1,6 +1,6 @@
 package edu.ucsb.cs56.eventsCalendar.controller;
 
-//import main.java.edu.ucsb.cs56.pconrad.springboot.bean.Event;
+import edu.ucsb.cs56.eventsCalendar.bean.Event;
 import edu.ucsb.cs56.eventsCalendar.service.ToJava;
 
 import java.util.HashMap;
@@ -15,9 +15,9 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.logging.Logger;
 
 @Controller
-public class HelloController {
+public class EventsController {
 
-    private final static Logger LOGGER = Logger.getLogger(HelloController.class.getName());
+    private final static Logger LOGGER = Logger.getLogger(EventsController.class.getName());
     //LOGGER.setLevel(Level.INFO);
 
 

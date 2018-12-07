@@ -38,8 +38,8 @@ public class ToJava {
 	public static List eventsToList() throws java.io.IOException, java.net.URISyntaxException {
  		byte [] jsonData = readByteDataFromResourceFile("/developerApi.json");
  		ObjectMapper om = new ObjectMapper();
-    	List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
-    	return list;
+    		List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
+    		return list;
 	}
 
 	public static void main(String [] args) throws java.io.IOException, java.net.URISyntaxException {
@@ -48,7 +48,8 @@ public class ToJava {
  		// read buildings.json into a List<BuildingCode>
  		byte [] jsonData = readByteDataFromResourceFile("/developerApi.json");
  		ObjectMapper om = new ObjectMapper();
-	    List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
+	    	List<Event> list = om.readValue(jsonData, new TypeReference<List<Event>>(){});
  		System.out.println(list);
     }
 }
+
